@@ -1,18 +1,19 @@
 ﻿#include <iostream>
-#include <fstream> 
+#include <fstream>
+#include <cstdlib>
 #include "math.h"
 using namespace std;
 
 const int MAXN = 1005;
-int w[MAXN];   
+int w[MAXN];
 int v[MAXN];
-int f[MAXN][MAXN]; 
+int f[MAXN][MAXN];
 int res=0;
 int main() {
 	int M, N;
 
 	ifstream ifile;
-	ifile.open("in\\d_quite_big.in");
+	ifile.open("in\\a_example.in");
 	ifile >> M >> N;
 
 	int* s = new int[N];
