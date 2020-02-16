@@ -1,4 +1,5 @@
 #include<iostream>
+#include <fstream> 
 #include<cstdio>
 #include<cstring>
 #include<cstdlib>
@@ -50,8 +51,21 @@ void dfs(long dep)
 int main()
 {
     printed = 0;
-    scanf("%lld %ld",&c,&n);
-    for (long i = 0;i < n; ++i) scanf("%ld",&a[i]);
+    //scanf("%lld %ld",&c,&n);
+    //for (long i = 0;i < n; ++i) scanf("%ld",&a[i]);
+
+	ifstream ifile;
+	ifile.open("in\\a_example.in");
+	ifile >> c >> n;
+
+	for (long i = 0; i < n; ++i)
+		ifile >> a[i];
+
+	cout << c << ' ' << n << endl;
+	for (long i = 0; i < n; ++i)
+		cout << a[i] << ' ';
+	cout << endl;
+
     memset(temporary,0,sizeof(temporary));
     memset(visited,0,sizeof(visited));
     mindiff = c;
@@ -61,5 +75,7 @@ int main()
         printf("%ld\n",globaldep+1);
         print(globaldep,finally);
     }
+
+	system("pause");
     return 0;
 }

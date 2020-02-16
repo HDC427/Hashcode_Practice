@@ -151,7 +151,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="PizzaSlices.cpp" />
+    <None Include="in\a_example.in" />
+    <None Include="in\b_small.in" />
+    <None Include="in\c_medium.in" />
+    <None Include="in\d_quite_big.in" />
+    <None Include="in\e_also_big.in" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

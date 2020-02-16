@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+
 long n,a[20000],visited[20000],temporary[20000],finally[20000],globaldep;
 long long c,mindiff;
 int pd;
@@ -49,8 +51,13 @@ void dfs(long dep)
 int main()
 {
     printed = 0;
-    scanf("%lld %ld",&c,&n);
-    for (long i = 0;i < n; ++i) scanf("%ld",&a[i]);
+    //scanf("%lld %ld",&c,&n);
+    //for (long i = 0;i < n; ++i) scanf("%ld",&a[i]);
+	//FILE *infile = fopen_s(&infile, "in\\a_exmaple.in", "r");
+	//fscanf_s(infile, "%lld %ld", &c, &n);
+	//for (long i = 0; i < n; ++i) fscanf_s(infile, "%ld", &a[i]);
+
+
     memset(temporary,0,sizeof(temporary));
     memset(visited,0,sizeof(visited));
     mindiff = c;
